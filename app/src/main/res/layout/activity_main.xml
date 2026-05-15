@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BusGo Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Member 3 Buttons -->
+    <Button
+        android:id="@+id/btnBusTracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bus Tracker (M3)"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnFavourites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Favourites (M3)"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Member 4 Buttons -->
+    <Button
+        android:id="@+id/btnNearbyStops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nearby Stops (M4)"
+        android:backgroundTint="#1565C0"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile (M4)"
+        android:backgroundTint="#1565C0"/>
+
+</LinearLayout>

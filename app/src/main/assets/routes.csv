@@ -1,0 +1,98 @@
+﻿SL No,Route No,Source,Destination
+1,13,Shivajinagara Bus Station,Banashankari TTMC
+2,18,Kempegowda Bus Station,Marenahalli Bus Station
+3,25A,Kempegowda Bus Station,BTM Layout
+4,45D,Kempegowda Bus Station,AGS Layout
+5,61,Kempegowda Bus Station,Vijayanagara TTMC
+6,63,Shivajinagara Bus Station,BCC Layout
+7,75B,Malleshwaram Bus Stand,Hampinagara
+8,90E,Kempegowda Bus Station,Yeshawanthapura Railway Station
+9,94,Shivajinagara Bus Station,Yeshawanthapura TTMC
+10,94E,Shivajinagara Bus Station,Yeshawanthapura Railway Station
+11,96,Kempegowda Bus Station,Kempegowda Bus Station
+12,96A,Kempegowda Bus Station,Kempegowda Bus Station
+13,96G,Kempegowda Bus Station,Shankarnagh Bus Stand
+14,111,KR Market,Kaval Byrasandra
+15,111C,Kempegowda Bus Station,Kaval Byrasandra
+16,114A,Shivajinagara Bus Station,Sultanpalya
+17,138,Kempegowda Bus Station,Jeevan Bheemanagara
+18,171,Kempegowda Bus Station,Koramangala 1st Block
+19,176,Hampinagara,Kaval Byrasandra
+20,195,Shivajinagara Bus Station,Chandra Layout
+21,201D,S V Metro Station,Central Silk Board
+22,201G,Banashankari TTMC,Jeevan Bheemanagara
+23,210N,Kempegowda Bus Station,Uttarahalli
+24,215H,Kempegowda Bus Station,Jambu Savari Dinne
+25,215N,Kempegowda Bus Station,Anjanapura
+26,225C,Kempegowda Bus Station,BEML Layout 5th Stage
+27,226M,KR Market,Bidadi
+28,226N,Kempegowda Bus Station,Bidadi
+29,234E,Kempegowda Bus Station,Hullala Sattelite Town
+30,238U,Kempegowda Bus Station,Bengaluru University Administrative Block
+31,242,KR Market,Tavarakere
+32,242B,Kempegowda Bus Station,Tavarakere
+33,248,KR Market,Jalahalli Cross
+34,250P,Kempegowda Bus Station,Chikkabanavara
+35,252F,Kempegowda Bus Station,Peenya 2nd Stage
+36,253,KR Market,Hesaraghatta I D Farm
+37,253J,Kempegowda Bus Station,Hesarughatta
+38,258,KR Market,Nelamangala
+39,258C,Kempegowda Bus Station,Nelamangala
+40,266,KR Market,Hesaraghatta I D Farm
+41,273C,Kempegowda Bus Station,Jalahalli Cross
+42,276,Kempegowda Bus Station,Vidyaranyapura
+43,276E,Vidyaranyapura,Shanthinagara
+44,284,Kempegowda Bus Station,Yelahanka
+45,285MA,Kempegowda Bus Station,Doddaballapura
+46,285MC,Shanthinagara,Doddaballapura
+47,291H,Kempegowda Bus Station,Ramakrishna Hegde Nagara
+48,293,KR Market,Razakpalya
+49,293S,Kempegowda Bus Station,Bagaluru
+50,296Q,Shivajinagara Bus Station,Kannuru
+51,298M,Kempegowda Bus Station,Devanahalli
+52,298ME,Kempegowda Bus Station,Devanahalli Govt Hospital
+53,300H,Kempegowda Bus Station,KR Puram
+54,302B,Kempegowda Bus Station,Kalyananagara
+55,305D,Kempegowda Bus Station,Channasandra
+56,314T,Kempegowda Bus Station,Rameshnagara
+57,316B,Kempegowda Bus Station,Budigere
+58,317,KR Market,Hosakote
+59,317G,Shivajinagara Bus Station,Hosakote
+60,317TA,KR Market,Tharabanahalli
+61,333E,Kempegowda Bus Station,Kadugodi
+62,342F,Kempegowda Bus Station,Sarjapura
+63,356M,Kempegowda Bus Station,Anekal
+64,360B,Kempegowda Bus Station,Attibele
+65,365J,Kempegowda Bus Station,Jigani APC Circle
+66,375D,Kengeri TTMC,Banashankari TTMC
+67,401A,Yelahanka,Peenya 2nd Stage
+68,401K,Yelahanka,Kengeri TTMC
+69,401M,Yeshawanthapura TTMC,Kengeri TTMC
+70,402D,Kempegowda Bus Station,Yelahanka New Town 5th Phase
+71,410,Bommanahalli,Jalahalli Cross
+72,410FA,Banashankari TTMC,Yeshawanthapura TTMC
+73,500A,Banashankari TTMC,Hebbala
+74,500D,Hebbala,Central Silk Board
+75,501A,Hebbala,Banashankari TTMC
+76,501BH,Banashankari TTMC,Hebbala
+77,502H,Kengeri TTMC,Dwarakanagara
+78,600F,Banashankari TTMC,Attibele
+79,G6,Shanthinagara TTMC,Shirke
+80,KBS5H,Kempegowda Bus Station,Harohalli
+81,TR12,Srinagara,Yeshawanthapura Railway Station
+82,HS1,Kempegowda Bus Station,Apollo Hospital Bannerughatta Road
+83,HS2,Kempegowda Bus Station,Supra Hospital RBI LO JP Nagar
+84,HS3,Kempegowda Bus Station,Rajarajeshwari Hospital
+85,HS4,Kempegowda Bus Station,Devanahalli General Hospital
+86,HS5,Kempegowda Bus Station,Ambedkar Medical College KG Halli
+87,HS6,Kempegowda Bus Station,Hosakote General Hospital
+88,HS6A,ESI Indiranagara Hospital,Hosakote General Hospital
+89,HS7,Kempegowda Bus Station,Vaidehi Hospital Whitefield
+90,HS8,Kempegowda Bus Station,Nelamangala General Hospital
+91,HS9,Kempegowda Bus Station,Sapthagiri Medical College Chikkabanavara
+92,HS10,Kempegowda Bus Station,Sakra Hospital Devarabisanahalli
+93,HS11A,Banashankari,Banashankari
+94,HS12,Shanthinagara TTMC,Shanthinagara TTMC
+95,HS12A,Shanthinagara TTMC,Shanthinagara TTMC
+96,KIA9,Kempegowda Bus Station,Kempegowda International Airport
+97,MF12,Majestic,Banashankari

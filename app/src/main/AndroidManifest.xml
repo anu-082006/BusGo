@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NammaBMTC">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- LAUNCHER: Splash Screen -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- M1: Auth Flow -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".SignUpActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
+
+        <!-- M2: Home + Route Search -->
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".RouteSearchActivity" android:exported="false" />
+
+        <!-- M3: Bus Tracker + Favourites -->
+        <activity
+            android:name=".BusTrackerActivity"
+            android:label="@string/title_bus_tracker"
+            android:exported="false" />
+        <activity
+            android:name=".FavouritesActivity"
+            android:label="@string/title_favourites"
+            android:exported="false" />
+
+        <!-- M4: Nearby Stops + Profile -->
+        <activity
+            android:name=".NearbyStopsActivity"
+            android:label="@string/title_nearby_stops"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_profile"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

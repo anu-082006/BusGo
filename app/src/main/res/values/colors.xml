@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- M3/M4: BMTC Green (used in Tracker, Favourites, Nearby, Profile toolbars) -->
+    <color name="bmtc_header_green">#006442</color>
+    <color name="bmtc_sos_red">#FF0000</color>
+    <color name="bmtc_background">#F5F5F5</color>
+    <color name="bmtc_card_background">#121212</color>
+    <color name="bmtc_bottom_sheet_bg">#121212</color>
+    <color name="bmtc_text_primary">#1A1A1A</color>
+    <color name="bmtc_text_secondary">#757575</color>
+    <color name="bmtc_text_white">#121212</color>
+    <color name="bmtc_divider">#E0E0E0</color>
+    <color name="bmtc_drag_handle">#C0C0C0</color>
+
+    <!-- M2: BMTC Blue (used in Home, Route Search) -->
+    <color name="bmtc_blue">#00529B</color>
+    <color name="bmtc_blue_dark">#003366</color>
+    <color name="bmtc_blue_light">#E3F2FD</color>
+    <color name="bmtc_blue_very_light">#F0F7FF</color>
+    <color name="ripple_blue">#D1E9FF</color>
+    <color name="text_primary">#002147</color>
+    <color name="text_secondary">#576B7A</color>
+    <color name="text_hint">#758999</color>
+    <color name="background_page">#F8FAFC</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="nav_selected">#00529B</color>
+    <color name="nav_unselected">#94A3B8</color>
+    <color name="border_blue">#B0D4FF</color>
+    <color name="text_high_contrast">#002147</color>
+    <color name="text_hint_contrast">#003366</color>
+</resources>

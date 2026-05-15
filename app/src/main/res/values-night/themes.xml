@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.NammaBMTC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/bmtc_header_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/bmtc_header_green</item>
+    </style>
+</resources>

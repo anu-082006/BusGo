@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Main app theme (M2-style blue, used everywhere) -->
+    <style name="Theme.NammaBMTC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/bmtc_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/bmtc_blue_light</item>
+        <item name="colorOnPrimaryContainer">@color/bmtc_blue_dark</item>
+        <item name="colorSecondary">@color/bmtc_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/ripple_blue</item>
+        <item name="colorOnSecondaryContainer">@color/bmtc_blue_dark</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/bmtc_blue_very_light</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/bmtc_blue_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowBackground">@color/background_page</item>
+
+        <!-- Force labeled mode globally for BottomNavigationView -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="Widget.AppCompat.SearchView.BlackText" parent="Widget.AppCompat.SearchView">
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/bmtc_text_secondary</item>
+    </style>
+</resources>

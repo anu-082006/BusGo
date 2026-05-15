@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Namma BMTC</string>
+    <string name="google_maps_key">AIzaSyAzrkD2eVELEcFHuNLntpOQrkWl2pDRY4A</string>
+
+    <!-- Nearby Stops Screen -->
+    <string name="title_nearby_stops">Nearby Stops</string>
+    <string name="search_hint">Search for a place...</string>
+    <string name="sos_button">SOS</string>
+    <string name="sos_dialog_title">Emergency SOS</string>
+    <string name="sos_dialog_message">Are you in an emergency? This will alert your trusted contacts.</string>
+    <string name="sos_dialog_confirm">YES, SOS</string>
+    <string name="sos_dialog_cancel">CANCEL</string>
+    <string name="loading_stops">Finding nearby stops...</string>
+    <string name="no_stops_found">No bus stops found in this area.</string>
+    <string name="navigate">NAVIGATE</string>
+    <string name="towards">Towards: %1$s</string>
+
+    <!-- Profile Screen -->
+    <string name="title_profile">Profile</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="login_details">Login Details</string>
+    <string name="trusted_contacts">Trusted Contacts</string>
+    <string name="edit">EDIT</string>
+    <string name="add">ADD</string>
+    <string name="delete">DELETE</string>
+    <string name="change_password">Change Password</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="logout">Logout</string>
+    <string name="confirm_logout">Are you sure you want to logout?</string>
+    <string name="confirm_delete_account">Are you sure you want to delete your account? This action cannot be undone.</string>
+    <string name="contact_picker_error">Failed to pick contact</string>
+    <string name="sos_info_title">About SOS</string>
+    <string name="sos_info_message">Your trusted contacts will be notified with your current location when you press the SOS button.</string>
+
+    <!-- Bus Tracker / Favourites -->
+    <string name="title_bus_tracker">Bus Tracker</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="select_route">Select Route</string>
+    <string name="next_bus_msg">Next bus in 5 minutes</string>
+    <string name="no_favourites">No favourites saved yet</string>
+
+    <!-- Route Search (M2) -->
+    <string name="search_routes">Search Routes</string>
+    <string name="from_hint">From (e.g., Majestic)</string>
+    <string name="to_hint">To (e.g., Banashankari)</string>
+    <string name="find_routes">Find Routes</string>
+
+    <!-- Dialog Labels -->
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm New Password</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+</resources>
