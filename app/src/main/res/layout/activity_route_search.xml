@@ -35,13 +35,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_max="488dp">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/etSource"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/text_high_contrast"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:completionThreshold="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -60,13 +61,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_max="488dp">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/etDestination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/text_high_contrast"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:completionThreshold="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
