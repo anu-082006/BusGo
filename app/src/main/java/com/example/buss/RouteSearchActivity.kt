@@ -2,8 +2,9 @@ package com.example.buss
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,15 +22,27 @@ class RouteSearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_route_search)
 
-        loadRoutesFromCsv()
-
-        val etSource: EditText = findViewById(R.id.etSource)
-        val etDestination: EditText = findViewById(R.id.etDestination)
+        val etSource: AutoCompleteTextView = findViewById(R.id.etSource)
+        val etDestination: AutoCompleteTextView = findViewById(R.id.etDestination)
         val btnSearch: Button = findViewById(R.id.btnSearch)
         val rvResults: RecyclerView = findViewById(R.id.rvResults)
 
+        loadRoutesFromCsv()
+
+        // Extract unique stop names for autofill
+        val stopNames = mutableSetOf<String>()
+        allRoutes.forEach {
+            stopNames.add(it.source)
+            stopNames.add(it.destination)
+        }
+        val sortedStops = stopNames.toList().sorted()
+
+        val autoCompleteAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, sortedStops)
+        etSource.setAdapter(autoCompleteAdapter)
+        etDestination.setAdapter(autoCompleteAdapter)
+
         adapter = RouteAdapter(emptyList()) { route ->
-            // Toggle favourite using M3/M4's SharedPreferencesHelper
+            // Toggle favourite using SharedPreferencesHelper
             val current = SharedPreferencesHelper.getFavourites(this).toMutableSet()
             if (current.contains(route.routeNo)) {
                 current.remove(route.routeNo)
@@ -127,11 +140,6 @@ class RouteSearchActivity : AppCompatActivity() {
                 line = reader.readLine()
             }
             reader.close()
-
-            // Show toast with count (for debugging)
-            runOnUiThread {
-                Toast.makeText(this, "Loaded ${allRoutes.size} routes", Toast.LENGTH_SHORT).show()
-            }
 
         } catch (e: Exception) {
             e.printStackTrace()
