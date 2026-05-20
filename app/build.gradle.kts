@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("com.google.mlkit:text-recognition:16.0.0")
     // Core AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
