@@ -4,4 +4,10 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor">@color/bmtc_header_green</item>
     </style>
+
+    <style name="Theme.Buss.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/bmtc_blue</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+    </style>
 </resources>
