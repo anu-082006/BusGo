@@ -1,14 +1,18 @@
 package com.example.buss
 
+import com.google.firebase.auth.FirebaseAuth
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class SignUpActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        auth = FirebaseAuth.getInstance()
         setContentView(R.layout.activity_signup)
 
         val name = findViewById<EditText>(R.id.etName)
@@ -44,22 +48,43 @@ class SignUpActivity : AppCompatActivity() {
             }
 
             if (passStr == confStr) {
-                AppPrefsHelper.saveUser(
-                    this,
-                    nameStr,
-                    emailStr,
-                    passStr,
-                    mobileStr,
-                    gender
-                )
-                // Also save name to the M3 SharedPreferencesHelper for consistency
-                SharedPreferencesHelper.saveUserName(this, nameStr)
-                
-                Toast.makeText(this, "Registered Successfully", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
+
+                auth.createUserWithEmailAndPassword(emailStr, passStr)
+                    .addOnCompleteListener { task ->
+
+                        if (task.isSuccessful) {
+
+                            SharedPreferencesHelper.saveUserName(this, nameStr)
+
+                            Toast.makeText(
+                                this,
+                                "Registered Successfully",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                            startActivity(
+                                Intent(this, LoginActivity::class.java)
+                            )
+
+                            finish()
+
+                        } else {
+
+                            Toast.makeText(
+                                this,
+                                task.exception?.message,
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+
             } else {
-                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(
+                    this,
+                    "Passwords do not match",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

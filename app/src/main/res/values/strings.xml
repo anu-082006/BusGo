@@ -58,4 +58,6 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="other">Other</string>
+
+    <string name="default_web_client_id">540176504267-g9t6h1aq38pltu5qqo5jpod3pb65h5mk.apps.googleusercontent.com</string>
 </resources>

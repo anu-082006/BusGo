@@ -28,6 +28,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import org.json.JSONArray
 import org.json.JSONObject
+import com.google.firebase.auth.FirebaseAuth
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -81,8 +82,11 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun loadUserData() {
         // Integrate Signup details from AppPrefsHelper
-        val name = AppPrefsHelper.getName(this).ifEmpty { "John Doe" }
-        val email = AppPrefsHelper.getEmail(this) ?: "john.doe@example.com"
+        //val name = AppPrefsHelper.getName(this).ifEmpty { "John Doe" }
+        //val email = AppPrefsHelper.getEmail(this) ?: "john.doe@example.com"
+        val user = FirebaseAuth.getInstance().currentUser
+        val email = user?.email ?: "No Email"
+        val name = user?.displayName ?: "User"
         val mobile = AppPrefsHelper.getMobile(this).ifEmpty { "+91 9876543210" }
         val gender = AppPrefsHelper.getGender(this).ifEmpty { "Male" }
 
@@ -320,7 +324,9 @@ class ProfileActivity : AppCompatActivity() {
             .setTitle("Delete Account")
             .setMessage("Are you sure you want to delete your account? This action cannot be undone.")
             .setPositiveButton("Delete") { _, _ ->
-                AppPrefsHelper.logout(this)
+                //AppPrefsHelper.logout(this)
+                FirebaseAuth.getInstance().currentUser
+                    ?.delete()
                 Toast.makeText(this, "Account Deleted", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -336,11 +342,24 @@ class ProfileActivity : AppCompatActivity() {
             .setTitle("Logout")
             .setMessage("Are you sure you want to logout?")
             .setPositiveButton("Logout") { _, _ ->
-                AppPrefsHelper.logout(this)
-                Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                FirebaseAuth.getInstance().signOut()
+
+                Toast.makeText(
+                    this,
+                    "Logged out",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                val intent =
+                    Intent(this, LoginActivity::class.java)
+
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+
                 startActivity(intent)
+
                 finish()
             }
             .setNegativeButton("Cancel", null)
