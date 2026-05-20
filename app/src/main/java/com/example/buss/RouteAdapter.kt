@@ -1,13 +1,15 @@
 package com.example.buss
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class RouteAdapter(
     private var routes: List<BusRoute>,
@@ -37,16 +39,23 @@ class RouteAdapter(
 
         holder.ivFavorite.setOnClickListener {
             onFavoriteClick(route)
+            // Immediately update the icon state after click
             updateFavoriteIcon(holder.ivFavorite, route.routeNo, context)
         }
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(
-                context,
-                "Stops: ${route.stops.joinToString(" → ")}",
-                Toast.LENGTH_LONG
-            ).show()
+            showRouteDetails(context, route)
         }
+    }
+
+    private fun showRouteDetails(context: Context, route: BusRoute) {
+        MaterialAlertDialogBuilder(context, R.style.Theme_Buss_Dialog)
+            .setTitle("Route ${route.routeNo} Details")
+            .setMessage("Source: ${route.source}\nDestination: ${route.destination}\n\nStops:\n${route.stops.joinToString(" → ")}")
+            .setPositiveButton("Close") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
     }
 
     override fun getItemCount() = routes.size
@@ -58,10 +67,22 @@ class RouteAdapter(
 
     private fun updateFavoriteIcon(imageView: ImageView, routeNo: String, context: Context) {
         val favs = SharedPreferencesHelper.getFavourites(context)
-        if (favs.contains(routeNo)) {
+        val isFavorite = favs.contains(routeNo)
+        
+        if (isFavorite) {
+            // Filled star icon
             imageView.setImageResource(android.R.drawable.btn_star_big_on)
+            // BMTC Blue color
+            imageView.imageTintList = ColorStateList.valueOf(
+                ContextCompat.getColor(context, R.color.bmtc_blue)
+            )
         } else {
+            // Empty/Outline star icon
             imageView.setImageResource(android.R.drawable.btn_star_big_off)
+            // Grey/Unselected color
+            imageView.imageTintList = ColorStateList.valueOf(
+                ContextCompat.getColor(context, R.color.nav_unselected)
+            )
         }
     }
 }

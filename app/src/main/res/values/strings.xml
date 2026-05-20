@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Namma BMTC</string>
+    <string name="app_name">BusGo</string>
     <string name="google_maps_key">AIzaSyAzrkD2eVELEcFHuNLntpOQrkWl2pDRY4A</string>
 
     <!-- Nearby Stops Screen -->
