@@ -1,6 +1,7 @@
 package com.example.buss
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
@@ -39,7 +40,6 @@ class RouteAdapter(
 
         holder.ivFavorite.setOnClickListener {
             onFavoriteClick(route)
-            // Immediately update the icon state after click
             updateFavoriteIcon(holder.ivFavorite, route.routeNo, context)
         }
 
@@ -50,10 +50,14 @@ class RouteAdapter(
 
     private fun showRouteDetails(context: Context, route: BusRoute) {
         MaterialAlertDialogBuilder(context, R.style.Theme_Buss_Dialog)
-            .setTitle("Route ${route.routeNo} Details")
-            .setMessage("Source: ${route.source}\nDestination: ${route.destination}\n\nStops:\n${route.stops.joinToString(" → ")}")
-            .setPositiveButton("Close") { dialog, _ ->
-                dialog.dismiss()
+            .setTitle("Route ${route.routeNo}")
+            .setMessage("From: ${route.source}\nTo: ${route.destination}\n\nDo you want to track this bus in real-time?")
+            .setNeutralButton("Close") { dialog, _ -> dialog.dismiss() }
+            .setPositiveButton("Track Bus") { _, _ ->
+                val intent = Intent(context, BusTrackerActivity::class.java).apply {
+                    putExtra("SELECTED_ROUTE", route)
+                }
+                context.startActivity(intent)
             }
             .show()
     }
@@ -70,16 +74,12 @@ class RouteAdapter(
         val isFavorite = favs.contains(routeNo)
         
         if (isFavorite) {
-            // Filled star icon
             imageView.setImageResource(android.R.drawable.btn_star_big_on)
-            // BMTC Blue color
             imageView.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(context, R.color.bmtc_blue)
             )
         } else {
-            // Empty/Outline star icon
             imageView.setImageResource(android.R.drawable.btn_star_big_off)
-            // Grey/Unselected color
             imageView.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(context, R.color.nav_unselected)
             )
